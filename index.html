@@ -1,0 +1,196 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn anything.tuts</title>
+    
+</head>
+<body>
+    <header><span class="drawer-icon" onclick="openDrawer()">☰</span>
+        <h1>My Tutorial Website</h1>
+<div class="drawer">
+    <a href="#" id="closeDrawer" onclick="closeDrawer()">✖</a>
+    <ul>
+        <li><a href="#latest-tutorials">Latest Tutorials</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</div>
+    </header>
+    
+    <main>
+        <section>
+            <h2>Latest Tutorials</h2>
+            <article>
+                <h3>Topic 1</h3>
+                <p>Description of the tutorial.</p><h4>. Training a dog requires patience, consistency, and positive reinforcement. The process of training a dog typically begins with basic obedience commands such as sit, stay, come, and heel. These commands are important for establishing a line of communication between the owner and the dog. 
+
+It is essential to use positive reinforcement techniques such as treats, praise, and toys to reward the dog for good behavior. This encourages the dog to repeat the desired behavior in the future. Punishment or harsh training methods should be avoided as they can damage the bond between the dog and its owner.
+
+Consistency is key when training a dog. Commands should be given in a clear and consistent manner, and everyone in the household should be on the same page when it comes to training. Dogs thrive on routines and consistency, so it is important to establish a training schedule and stick to it.
+
+Training sessions should be kept short and fun to prevent the dog from becoming bored or frustrated. It is also important to be patient and understanding with your dog. Some dogs may pick up commands quickly, while others may take more time to grasp them. It is essential to be patient and continue working with the dog until they understand what is being asked of them.
+
+In conclusion, training a dog requires time, patience, and consistency. By using positive reinforcement techniques, establishing a routine, and being patient with your dog, you can successfully train them to be a well-behaved and obedient companion.</4>
+            </article>
+            <article>
+                <h3>Topic 2</h3>
+                <p>Description of the tutorial.</p>
+     <a href="/storage/emulated/0/Pictures/videotophoto/VID_20240804_231647_051426_Capture_1722876689625/IMG6.jpg">
+         <img src=" /storage/emulated/0/Pictures/videotophoto/VID_20240804_231647_051426_Capture_1722876689625/IMG6.jpg" alt="Description of the image">
+     </a>
+            </article>
+            <!-- Add more articles -->
+        </section>
+    </main>
+    <footer><footer>
+         <p>Follow us on social media:</p>
+         <a href="https://www.facebook.com">Facebook</a>
+         <a href="https://www.twitter.com">Twitter</a>
+         <a href="https://www.instagram.com">Instagram</a>
+     </footer>
+        <p>&copy; 2021 My Tutorial Website</p>
+    </footer>
+    <script>
+// Function to toggle active class on navigation items
+const navItems = document.querySelectorAll('nav a');
+
+navItems.forEach(item => {
+    item.addEventListener('click', function() {
+        navItems.forEach(item => item.classList.remove('active'));
+        this.classList.add('active');
+        // Add  to load dynamic content based on clicked item
+    });
+});
+
+// Function to display a message on page load
+window.addEventListener('load', function() {
+    alert('Welcome to My Tutorial Website!');
+});
+
+// Function to add a new tutorial dynamically
+const addTutorialButton = document.createElement('button');
+addTutorialButton.textContent = 'Add Tutorial';
+addTutorialButton.addEventListener('click', function() {
+    const newArticle = document.createElement('article');
+    newArticle.innerHTML = '<h3>New Topic</h3><p>Description of the new tutorial.</p>';
+    document.querySelector('section').appendChild(newArticle);
+});
+document.querySelector('header').appendChild(addTutorialButton);
+function openDrawer() {
+    document.querySelector('.drawer').style.width = '250px';
+}
+
+function closeDrawer() {
+    document.querySelector('.drawer').style.width = '0';
+}
+</script>
+</body>
+<style>     
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+h1 {
+    margin: 0;
+    padding: 10px;
+    animation: zoom 2s infinite alternate; /* Zoom in and out animation */
+}
+
+@keyframes zoom {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+drawer a#closeDrawer {
+    color: green;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #333; /* Different color for the heading */
+    margin-bottom: 10px;
+}
+
+article {
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+.drawer {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+}
+
+.drawer a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.drawer a:hover {
+    color: #f1f1f1;
+}
+
+.drawer-icon {
+    cursor: pointer;
+    font-size: 30px;
+    margin-right: 10px;
+}
+</style>
+
+
+
+
+</style>
+</html>
