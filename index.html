@@ -10,13 +10,23 @@
 </head>
 <body>
     <header><span class="drawer-icon" onclick="openDrawer()">☰</span>
-        <h1>My Tutorial Website</h1>
+        <h1>learneverything.tuts</h1>
 <div class="drawer">
     <a href="#" id="closeDrawer" onclick="closeDrawer()">✖</a>
+<p onclick="toggleDrawer()">Content</p>
+     <div id="myDrawer" class="drawr">
+  <ul>
+    <li><a href= "science.html">Science</a></li>
+    <li><a href="art.html">Art</a></li>
+    <li><a href="Answers.html">Answers to Questions</a></li>
+  </ul>
+</div>
     <ul>
+   
+
         <li><a href="#latest-tutorials">Latest Tutorials</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
     </ul>
 </div>
     </header>
@@ -52,9 +62,17 @@ In conclusion, training a dog requires time, patience, and consistency. By using
          <a href="https://www.twitter.com">Twitter</a>
          <a href="https://www.instagram.com">Instagram</a>
      </footer>
-        <p>&copy; 2021 My Tutorial Website</p>
+        <p>&copy; 2024 My Tutorial Website</p>
     </footer>
     <script>
+    function toggleDrawer() {
+  var drawer = document.getElementById('myDrawer');
+  if (drawer.style.display === 'block') {
+    drawer.style.display = 'none';
+  } else {
+    drawer.style.display = 'block';
+  }
+}
 // Function to toggle active class on navigation items
 const navItems = document.querySelectorAll('nav a');
 
@@ -68,7 +86,7 @@ navItems.forEach(item => {
 
 // Function to display a message on page load
 window.addEventListener('load', function() {
-    alert('Welcome to My Tutorial Website!');
+    alert('Welcome to learneverything.tuts!');
 });
 
 // Function to add a new tutorial dynamically
@@ -90,6 +108,24 @@ function closeDrawer() {
 </script>
 </body>
 <style>     
+
+    img {
+        max-width: 100%; /* Set maximum width to prevent image overflow */
+        height: auto; /* Maintain image aspect ratio */
+        display: block; /* Ensure the image is displayed as a block element */
+        margin: 0 auto; /* Center the image horizontally on the page */
+    }
+
+
+  .drawr {
+    display: none;
+    background-color: orange;
+    padding: 10px;
+    margin-top: 10px;
+  }
+  .drawr a:hover {
+    color: blue;
+}
 
 
 body {
@@ -193,4 +229,9 @@ footer {
 
 
 </style>
+
+
+
+
+
 </html>
