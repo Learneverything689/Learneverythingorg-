@@ -1,28 +1,49 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="background:pink">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chemistry Learning for SS2 Students</title>
     <style>
-        @keyframes rotate {
-            from {
-                transform: rotate(0deg);
+        @keyframes move {
+            0% {
+                transform: translateX(0%);
             }
-            to {
-                transform: rotate(360deg);
+            100% {
+                transform: translateX(100%);
             }
         }
-        
-        .rotate {
-            animation: rotate 4s linear infinite;
+
+        @keyframes changeColor {
+            0%, 100% {
+                color: red;
+            }
+            50% {
+                color: blue;
+            }
+        }
+
+        .move {
+            animation: move 20s linear infinite;
+        }
+
+        .change-color {
+            animation: changeColor 2s infinite;
         }
     </style>
+    <script>
+        setInterval(() => {
+            const title = document.querySelector('.move');
+            title.classList.toggle('change-color');
+        }, 2000);
+    </script>
 </head>
 <body>
-    <h1 class="rotate">Welcome to Chemistry Learning for SS2 Students</h1>
+    <h1 class="move change-color">Welcome to Chemistry Learning for SS2 Students</h1>
     <p>This page is dedicated to providing comprehensive and engaging chemistry lessons tailored for SS2 students. Explore a wide range of topics, practical experiments, and resources to enhance your understanding of chemistry concepts. Get ready to embark on an exciting journey of discovery and learning!</p>
+     <li><a href="note.html">click the link to view note</a></li>
+     <li><a href="assignment.html">Click the link for assignment</a></li>
 </body>
 </html>
